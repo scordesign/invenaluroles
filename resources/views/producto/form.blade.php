@@ -43,7 +43,7 @@
         </div>
         <div class="form-group">
             {{ Form::label('Conteo 3') }}
-            {{ Form::text('conteo3', $producto->conteo3, ['class' => 'form-control' . ($errors->has('conteo3') ? ' is-invalid' : ''), 'placeholder' => 'Conteo 3']) }}
+            {{ Form::text('conteo3', $producto->conteo3, ['class' => 'form-control' . ($errors->has('conteo3') ? ' is-invalid' : ''), 'placeholder' => 'Conteo 3' , 'id' => 'co13']) }}
             {!! $errors->first('conteo3', '<div class="invalid-feedback">:message</div>') !!}
         </div>
     <script>
@@ -51,11 +51,14 @@
         function calculate() {
             var con1 = document.getElementById("co1").value;
             var con2 = document.getElementById("co2").value;
+            var con3 = document.getElementById("co3");
             var calculo = con2 - con1;
-            console.log(con1);
-            console.log(con2);
-            console.log(calculo);
             var con1y2 = document.getElementById("co1y2").setAttribute("value", calculo);
+            if (calculo == o) {
+                con3.setAttribute("Disabled", "Disabled");
+            } else {
+                con3.removeAttribute('disabled');
+            }
         }
 
     </script>
