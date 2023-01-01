@@ -38,11 +38,7 @@
         </div>
         <div class="form-group">
             {{ Form::label('Diferencia Conteo 1 VS Conteo 2') }}
-<<<<<<< HEAD
             {{ Form::text('deferencia12', $producto->deferencia12, ['class' => 'form-control' . ($errors->has('deferencia12') ? ' is-invalid' : ''), 'placeholder' => 'Diferencia','readonly' => true , 'id' => 'co1y2']) }}
-=======
-            {{ Form::text('deferencia12', $producto->deferencia12, ['class' => 'form-control' . ($errors->has('deferencia12') ? ' is-invalid' : ''), 'placeholder' => 'Diferencia' ,'Disabled' =>'disabled' , 'id' => 'co1y2']) }}
->>>>>>> a5e0a4305f9e16e40a84e918f3c032002f84a77f
             {!! $errors->first('deferencia12', '<div class="invalid-feedback">:message</div>') !!}
         </div>
         <div class="form-group">
