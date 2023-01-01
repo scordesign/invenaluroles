@@ -38,7 +38,7 @@
         </div>
         <div class="form-group">
             {{ Form::label('Diferencia Conteo 1 VS Conteo 2') }}
-            {{ Form::text('deferencia12', $producto->deferencia12, ['class' => 'form-control' . ($errors->has('deferencia12') ? ' is-invalid' : ''), 'placeholder' => 'Diferencia'  , 'id' => 'co1y2']) }}
+            {{ Form::text('deferencia12', $producto->deferencia12, ['class' => 'form-control' . ($errors->has('deferencia12') ? ' is-invalid' : ''), 'placeholder' => 'Diferencia' ,'Disabled' =>'disabled' , 'id' => 'co1y2']) }}
             {!! $errors->first('deferencia12', '<div class="invalid-feedback">:message</div>') !!}
         </div>
         <div class="form-group">
