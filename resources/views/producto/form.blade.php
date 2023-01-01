@@ -28,17 +28,17 @@
         </div>
         <div class="form-group">
             {{ Form::label('Registro Conteo 1') }}
-            {{ Form::text('conteo1', $producto->conteo1, ['class' => 'form-control' . ($errors->has('conteo1') ? ' is-invalid' : ''), 'placeholder' => 'Conteo 1'] , 'id' => 'co1') }}
+            {{ Form::text('conteo1', $producto->conteo1, ['class' => 'form-control' . ($errors->has('conteo1') ? ' is-invalid' : ''), 'placeholder' => 'Conteo 1' , 'id' => 'co1']) }}
             {!! $errors->first('conteo1', '<div class="invalid-feedback">:message</div>') !!}
         </div>
         <div class="form-group">
             {{ Form::label('Registro Conteo 2') }}
-            {{ Form::text('conteo2', $producto->conteo2, ['class' => 'form-control' . ($errors->has('conteo2') ? ' is-invalid' : ''), 'placeholder' => 'Conteo 2'], 'id' => 'co2' , 'onkeyup' => 'calculate()') }}
+            {{ Form::text('conteo2', $producto->conteo2, ['class' => 'form-control' . ($errors->has('conteo2') ? ' is-invalid' : ''), 'placeholder' => 'Conteo 2',   'id' => 'co2' , 'onkeyup' => 'calculate()']) }}
             {!! $errors->first('conteo2', '<div class="invalid-feedback">:message</div>') !!}
         </div>
         <div class="form-group">
             {{ Form::label('Diferencia Conteo 1 VS Conteo 2') }}
-            {{ Form::text('deferencia12', $producto->deferencia12, ['class' => 'form-control' . ($errors->has('deferencia12') ? ' is-invalid' : ''), 'placeholder' => 'Diferencia' , 'id' => 'co1y2']) }}
+            {{ Form::text('deferencia12', $producto->deferencia12, ['class' => 'form-control' . ($errors->has('deferencia12') ? ' is-invalid' : ''), 'placeholder' => 'Diferencia' ,'Disabled' =>'disabled' , 'id' => 'co1y2']) }}
             {!! $errors->first('deferencia12', '<div class="invalid-feedback">:message</div>') !!}
         </div>
         <div class="form-group">
@@ -49,9 +49,12 @@
     <script>
 
         function calculate() {
-            var con1 = Number(document.getElementById("co1").getAttribute("value"));
-            var con2 = Number(document.getElementById("co2").getAttribute("value"));
-            var calculo = con1 - con2;
+            var con1 = document.getElementById("co1").value;
+            var con2 = document.getElementById("co2").value;
+            var calculo = con2 - con1;
+            console.log(con1);
+            console.log(con2);
+            console.log(calculo);
             var con1y2 = document.getElementById("co1y2").setAttribute("value", calculo);
         }
 
