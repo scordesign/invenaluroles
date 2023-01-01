@@ -20,39 +20,39 @@
 
                     <div class="card-body">
                         
-                        <div class="form-group">
+                        <div class="form-group" name="{{ $producto->name_id }}">
                             <strong>Nombre o Codigo:</strong>
                             {{ $producto->name_id }}
                         </div>
-                        <div class="form-group">
+                        <div class="form-group" name="{{ $producto->name_id }}">
                             <strong>Bodega:</strong>
                             {{ $producto->bodega_id }}
                         </div>
-                        <div class="form-group">
+                        <div class="form-group" name="{{ $producto->name_id }}">
                             <strong>Grupo:</strong>
                             {{ $producto->grupo_id }}
                         </div>
-                        <div class="form-group">
+                        <div class="form-group" name="{{ $producto->name_id }}">
                             <strong>Unidad:</strong>
                             {{ $producto->unidad_id }}
                         </div>
-                        <div class="form-group">
+                        <div class="form-group" name="{{ $producto->name_id }}">
                             <strong>Ubicacion:</strong>
                             {{ $producto->ubicacion_id }}
                         </div>
-                        <div class="form-group">
+                        <div class="form-group" name="{{ $producto->name_id }}">
                             <strong>Conteo 1:</strong>
                             {{ $producto->conteo1 }}
                         </div>
-                        <div class="form-group">
+                        <div class="form-group" name="{{ $producto->name_id }}">
                             <strong>Conteo 2:</strong>
                             {{ $producto->conteo2 }}
                         </div>
-                        <div class="form-group">
+                        <div class="form-group" name="{{ $producto->name_id }}">
                             <strong>Deferencia :</strong>
                             {{ $producto->deferencia12 }}
                         </div>
-                        <div class="form-group">
+                        <div class="form-group" name="{{ $producto->name_id }}">
                             <strong>Conteo 3:</strong>
                             {{ $producto->conteo3 }}
                         </div>
