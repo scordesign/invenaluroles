@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers;
+use App\Http\Controllers\Auth\AuthController;
 
 /*
 |--------------------------------------------------------------------------
@@ -19,11 +20,12 @@ Route::get('/', function () {
 });
 
 Auth::routes();
+Route::resource('user', App\Http\Controllers\UserController::class)->middleware('auth');
 Route::resource('bodegas', App\Http\Controllers\BodegaController::class)->middleware('auth');
 Route::resource('grupos', App\Http\Controllers\GrupoController::class)->middleware('auth');;
-Route::resource('codigos', App\Http\Controllers\CodigoController::class)->middleware('auth');;
-Route::resource('unidades', App\Http\Controllers\UnidadeController::class)->middleware('auth');;
-Route::resource('ubicaciones', App\Http\Controllers\UbicacioneController::class)->middleware('auth');;
-Route::resource('productos', App\Http\Controllers\ProductoController::class)->middleware('auth');;
+Route::resource('codigos', App\Http\Controllers\CodigoController::class)->middleware('auth');
+Route::resource('unidades', App\Http\Controllers\UnidadeController::class)->middleware('auth');
+Route::resource('ubicaciones', App\Http\Controllers\UbicacioneController::class)->middleware('auth');
+Route::resource('productos', App\Http\Controllers\ProductoController::class)->middleware('auth');
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
