@@ -54,7 +54,7 @@
             var con3 = document.getElementById("co3");
             var calculo = con2 - con1;
             var con1y2 = document.getElementById("co1y2").setAttribute("value", calculo);
-            if (calculo == o) {
+            if (calculo == 0) {
                 con3.setAttribute("Disabled", "Disabled");
             } else {
                 con3.removeAttribute('disabled');
