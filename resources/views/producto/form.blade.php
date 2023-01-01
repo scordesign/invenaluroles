@@ -43,7 +43,7 @@
         </div>
         <div class="form-group">
             {{ Form::label('Conteo 3') }}
-            {{ Form::text('conteo3', $producto->conteo3, ['class' => 'form-control' . ($errors->has('conteo3') ? ' is-invalid' : ''), 'placeholder' => 'Conteo 3' , 'id' => 'co13']) }}
+            {{ Form::text('conteo3', $producto->conteo3, ['class' => 'form-control' . ($errors->has('conteo3') ? ' is-invalid' : ''), 'placeholder' => 'Conteo 3' , 'id' => 'co3']) }}
             {!! $errors->first('conteo3', '<div class="invalid-feedback">:message</div>') !!}
         </div>
     <script>
