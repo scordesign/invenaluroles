@@ -34,6 +34,10 @@
                     <!-- Left Side Of Navbar -->
 
                     <ul class="navbar-nav mr-auto">
+                    <li class="nav-item">
+                            <a class="nav-link" href="{{ route('user.index') }}">
+                                {{ __('Usuarios') }}
+                            </a></li>
                         <li class="nav-item">
                             <a class="nav-link" href="{{ route('bodegas.index') }}">
                                 {{ __('Bodegas') }}
