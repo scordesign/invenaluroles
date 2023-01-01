@@ -3,6 +3,28 @@
 @section('template_title')
     CONTEO INVENTARIO
 @endsection
+<script>
+    function buscar() {
+        var count = document.getElementsByTagName("tr").length;
+        var buscar =document.getElementById("buscar").value.toLowerCase();
+        var acu = 1 ;
+        while (acu <= count) {
+            var elements = document.getElementById(acu).innerHTML.toLowerCase();
+            var element = document.getElementById(acu);
+            if (elements.includes(buscar)) {
+                element.classList.remove("vis");
+            } else {
+                element.classList.add("vis");
+            }
+            acu++;
+        }
+    }
+</script>
+<style>
+    .vis{
+        display: none;
+    }
+</style>
 
 @section('content')
     <div class="container-fluid">
@@ -14,6 +36,7 @@
 
                             <span id="card_title">
                                 {{ __('Conteo Inventario') }}
+                                <input id="buscar" onkeyup="buscar()" type="search" class="form-control float-right" placeholder="buscar" >
                             </span>
 
                              <div class="float-right">
@@ -51,8 +74,8 @@
                                 </thead>
                                 <tbody>
                                     @foreach ($productos as $producto)
-                                        <tr>
-                                            <td>{{ ++$i }}</td>
+                                        <tr id="{{ ++$i }}">
+                                            <td>{{ $i }}</td>
                                             
 											<td>{{ $producto->codigo->codigo }}</td>
 											<td>{{ $producto->bodega->name }}</td>
