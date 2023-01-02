@@ -87,7 +87,9 @@
 											<td>{{ $producto->ubicacione->name }}</td>
 											<td>{{ $producto->pareja->name }}</td>
 											<td>{{ $producto->conteo1 }}</td>
-											<td>{{ $producto->parejaone->name }}</td>
+                                            @isset($parejaone)
+                                            <td>{{ $producto->parejaone->name }}</td>
+                                            @endisset
 											<td>{{ $producto->conteo2 }}</td>
 											<td>{{ $producto->deferencia12 }}</td>
 											<td>{{ $producto->conteo3 }}</td>
