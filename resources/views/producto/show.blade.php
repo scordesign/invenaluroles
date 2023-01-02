@@ -47,7 +47,7 @@
                         </div>
                         <div class="form-group">
                             <strong>Pareja Conteo 2:</strong>
-                            {{ $producto->parejaone->name }}
+                            {{ $producto->parejat_id }}
                         </div>
                         <div class="form-group">
                             <strong>Conteo 2:</strong>
