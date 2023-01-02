@@ -1,9 +1,20 @@
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+<link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
+<script type="text/javascript"  src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
+<script>
+    jQuery(document).ready(function($){
+    $(document).ready(function() {
+        $('.js-example-basic-single').select2();
+    });
+    });
+</script>
+
 <div class="box box-info padding-1">
     <div class="box-body">
         
     <div class="form-group">
             {{ Form::label('Nombre o Codigo Producto') }}
-            {{ Form::select('name_id', $codigos , $producto->name_id, ['class' => 'form-control' . ($errors->has('name_id') ? ' is-invalid' : ''), 'placeholder' => 'Nombre o Codigo']) }}
+            {{ Form::select('name_id', $codigos , $producto->name_id, ['class' => 'js-example-basic-single' . ($errors->has('name_id') ? ' is-invalid' : ''), 'placeholder' => 'Nombre o Codigo']) }}
             {!! $errors->first('name_id', '<div class="invalid-feedback">:message</div>') !!}
         </div>
         <div class="form-group">
@@ -83,6 +94,15 @@ function calculate() {
 }
 
 </script>
+<script>
+    // In your Javascript (external .js resource or <script> tag)
+$(document).ready(function() {
+    $('.js-example-basic-single').select2();
+});
+
+</script>
+<link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
+<script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
     </div>
     <div class="box-footer mt20">
         <button type="submit" class="btn btn-primary">Guardar</button>
