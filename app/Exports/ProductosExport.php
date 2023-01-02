@@ -2,8 +2,17 @@
 
 namespace App\Exports;
 
-use Maatwebsite\Excel\Concerns\FromCollection;
 use App\Models\Producto;
+use App\Models\Bodega;
+use App\Models\Codigo;
+use App\Models\Grupo;
+use App\Models\Ubicacione;
+use App\Models\Unidade;
+use App\Models\Pareja;
+use App\Models\Parejaone;
+use Illuminate\Http\Request;
+
+use Maatwebsite\Excel\Concerns\FromCollection;
 class ProductosExport implements FromCollection
 {
     /**
@@ -13,8 +22,9 @@ class ProductosExport implements FromCollection
     {
         //
         Return Producto::all();
-
-        return view('producto.index', compact('producto'));
+         
+        
+        return view('producto.index', compact('producto', 'bodegas', 'grupos', 'codigos','ubicaciones','unidad','pareja','parejaone'));
 
     }
     

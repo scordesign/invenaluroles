@@ -32,6 +32,6 @@ Route::resource('parejas', App\Http\Controllers\ParejaController::class)->middle
 Route::resource('parejaones', App\Http\Controllers\ParejaoneController::class)->middleware('auth');
 
 
-Route::get('excel', [App\Http\Controllers\ExcelController::class, 'ProductosExport']);
+Route::get('/excel', [App\Http\Controllers\ExcelController::class, 'ProductosExport'])->name('excel');
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
