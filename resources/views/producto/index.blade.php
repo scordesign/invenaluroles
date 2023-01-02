@@ -87,7 +87,7 @@
 											<td>{{ $producto->bodega->name }}</td>
 											<td>{{ $producto->unidad->name }}</td>
 											<td>{{ $producto->ubicacione->name }}</td>
-											<td>{{ $producto->pareja->name }}</td>
+											<td>{{ $producto->pareja }}</td>
 											<td>{{ $producto->conteo1 }}</td>
                                             <td>{{ $producto->parejat_id }}</td>
 											<td>{{ $producto->conteo2 }}</td>
