@@ -72,6 +72,8 @@
 										<th>Ancho (Vidrio)</th>
 										<th>Alto (Vidrio)</th>
 										<th>Longitud (Perfileria)</th>
+										<th>Acciones</th>
+
 
                                         <th></th>
                                     </tr>
