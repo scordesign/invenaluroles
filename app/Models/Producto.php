@@ -46,7 +46,7 @@ class Producto extends Model
 		'ubicacion_id' => 'required',
 		//'pareja_id' => 'required',
 		//'parejat_id' => 'required',
-		'conteo1' => 'required',
+	//	'conteo1' => 'required',
 	//	'conteo2' => 'required',
 	//	'deferencia12' => 'required',
 	//	'conteo3' => 'required',
