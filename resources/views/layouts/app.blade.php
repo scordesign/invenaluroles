@@ -35,9 +35,11 @@
 
                     <ul class="navbar-nav mr-auto">
                     <li class="nav-item">
-                            <a class="nav-link" href="{{ route('user.index') }}">
+                          @role('admin')
+                            <a class="nav-link" href="{{ route('users.index') }}">
                                 {{ __('Usuarios') }}
-                            </a></li>
+                            </a></li>@endrole
+                            @role('admin')
                         <li class="nav-item">
                             <a class="nav-link" href="{{ route('bodegas.index') }}">
                                 {{ __('Bodegas') }}
@@ -57,7 +59,7 @@
                             <li class="nav-item">
                             <a class="nav-link" href="{{ route('ubicaciones.index') }}">
                                 {{ __('Ubicaciones') }}
-                            </a></li>
+                            </a></li>@endrole
                             <li class="nav-item">
                             <a class="nav-link" style="color:rgb(87, 164, 45);    font-size: larger;
     font-weight: bold; " href="{{ route('productos.index') }}">

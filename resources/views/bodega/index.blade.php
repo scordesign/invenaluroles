@@ -3,7 +3,7 @@
 @section('template_title')
     Bodega
 @endsection
-
+@role('admin')
 @section('content')
     <div class="container-fluid">
         <div class="row">
@@ -68,4 +68,6 @@
             </div>
         </div>
     </div>
+    
 @endsection
+@endrole

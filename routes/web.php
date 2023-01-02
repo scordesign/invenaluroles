@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers;
 use App\Http\Controllers\Auth\AuthController;
 
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -20,7 +21,7 @@ Route::get('/', function () {
 });
 
 Auth::routes();
-Route::resource('user', App\Http\Controllers\UserController::class)->middleware('auth');
+Route::resource('users', App\Http\Controllers\UserController::class)->middleware('auth');
 Route::resource('bodegas', App\Http\Controllers\BodegaController::class)->middleware('auth');
 Route::resource('grupos', App\Http\Controllers\GrupoController::class)->middleware('auth');;
 Route::resource('codigos', App\Http\Controllers\CodigoController::class)->middleware('auth');

@@ -3,7 +3,7 @@
 @section('template_title')
     Unidad
 @endsection
-
+@role('admin')
 @section('content')
     <div class="container-fluid">
         <div class="row">
@@ -69,3 +69,4 @@
         </div>
     </div>
 @endsection
+@endrole

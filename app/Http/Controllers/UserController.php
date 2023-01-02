@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\User;
 use Illuminate\Http\Request;
+use Spatie\Permission\Models\Role;
 
 /**
  * Class UserController
@@ -73,8 +74,9 @@ class UserController extends Controller
     public function edit($id)
     {
         $user = User::find($id);
+        $roles = Role::all();
 
-        return view('user.edit', compact('user'));
+        return view('user.edit', compact('user','roles'));
     }
 
     /**
