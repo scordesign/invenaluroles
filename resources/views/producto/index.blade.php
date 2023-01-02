@@ -65,7 +65,9 @@
 										<th>Ubicación</th>
 										<th>Pareja Conteo 1</th>
 										<th>Conteo 1</th>
+                                        @isset($parejaone)
 										<th>Pareja Conteo 2</th>
+                                        @endisset
 										<th>Conteo 2</th>
 										<th>Diferencia Conteo 1 & 2</th>
 										<th>Conteo 3</th>
