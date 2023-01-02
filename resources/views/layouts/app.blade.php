@@ -44,6 +44,10 @@
                                 {{ __('Usuarios') }}
                             </a></li>@endrole
                             @role('admin')
+                            <li class="nav-item">
+                            <a class="nav-link" href="https://127.0.0.1/excel">
+                                {{ __('Excel Conteo Fisico') }}
+                            </a></li>
                         <li class="nav-item">
                             <a class="nav-link" href="{{ route('bodegas.index') }}">
                                 {{ __('Bodegas') }}

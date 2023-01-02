@@ -22,23 +22,23 @@
                         
                         <div class="form-group" name="{{ $producto->name_id }}">
                             <strong>Nombre o Codigo:</strong>
-                            {{ $producto->name_id }}
+                            {{ $producto->codigo->codigo }}
                         </div>
                         <div class="form-group" name="{{ $producto->name_id }}">
                             <strong>Bodega:</strong>
-                            {{ $producto->bodega_id }}
+                            {{ $producto->bodega->name }}
                         </div>
                         <div class="form-group" name="{{ $producto->name_id }}">
                             <strong>Grupo:</strong>
-                            {{ $producto->grupo_id }}
+                            {{ $producto->grupo->name }}
                         </div>
                         <div class="form-group" name="{{ $producto->name_id }}">
                             <strong>Unidad:</strong>
-                            {{ $producto->unidad_id }}
+                            {{ $producto->unidad->name }}
                         </div>
                         <div class="form-group" name="{{ $producto->name_id }}">
                             <strong>Ubicacion:</strong>
-                            {{ $producto->ubicacion_id }}
+                            {{ $producto->ubicacione->name }}
                         </div>
                         <div class="form-group" name="{{ $producto->name_id }}">
                             <strong>Conteo 1:</strong>
@@ -49,7 +49,7 @@
                             {{ $producto->conteo2 }}
                         </div>
                         <div class="form-group" name="{{ $producto->name_id }}">
-                            <strong>Deferencia :</strong>
+                            <strong>Diferencia :</strong>
                             {{ $producto->deferencia12 }}
                         </div>
                         <div class="form-group" name="{{ $producto->name_id }}">
