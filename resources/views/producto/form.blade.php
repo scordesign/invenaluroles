@@ -11,11 +11,7 @@
             {{ Form::select('bodega_id', $bodegas , $producto->bodega_id, ['class' => 'form-control' . ($errors->has('bodega_id') ? ' is-invalid' : ''), 'placeholder' => 'Bodega']) }}
             {!! $errors->first('bodega_id', '<div class="invalid-feedback">:message</div>') !!}
         </div>
-        <div class="form-group">
-            {{ Form::label('Grupo') }}
-            {{ Form::select('grupo_id', $grupos , $producto->grupo_id, ['class' => 'form-control' . ($errors->has('grupo_id') ? ' is-invalid' : ''), 'placeholder' => 'Grupo']) }}
-            {!! $errors->first('grupo_id', '<div class="invalid-feedback">:message</div>') !!}
-        </div>
+      
         <div class="form-group">
             {{ Form::label('Tipo de Unidad') }}
             {{ Form::select('unidad_id', $unidad , $producto->unidad_id, ['class' => 'form-control' . ($errors->has('unidad_id') ? ' is-invalid' : ''), 'placeholder' => 'Unidad']) }}

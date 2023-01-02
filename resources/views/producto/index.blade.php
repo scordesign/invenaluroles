@@ -63,15 +63,15 @@
 										<th>Bodega</th>
 										<th>Unidad</th>
 										<th>Ubicación</th>
-										<th>Pareja Id</th>
-										<th>Conteo1</th>
-										<th>Parejat Id</th>
-										<th>Conteo2</th>
+										<th>Pareja Conteo 1</th>
+										<th>Conteo 1</th>
+										<th>Pareja Conteo 2</th>
+										<th>Conteo 2</th>
 										<th>Diferencia Conteo 1 & 2</th>
-										<th>Conteo3</th>
-										<th>Ancho</th>
-										<th>Alto</th>
-										<th>Longitud</th>
+										<th>Conteo 3</th>
+										<th>Ancho (Vidrio)</th>
+										<th>Alto (Vidrio)</th>
+										<th>Longitud (Perfileria)</th>
 
                                         <th></th>
                                     </tr>
