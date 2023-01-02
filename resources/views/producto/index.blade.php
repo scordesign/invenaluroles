@@ -72,7 +72,7 @@
 										<th>Conteo3</th>
 										<th>Ancho</th>
 										<th>Alto</th>
-										<th>Cantidad</th>
+										<th>Longitud</th>
 
                                         <th></th>
                                     </tr>

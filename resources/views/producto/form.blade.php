@@ -62,12 +62,12 @@
             {!! $errors->first('ancho', '<div class="invalid-feedback">:message</div>') !!}
         </div>
         <div class="form-group">
-            {{ Form::label('Alto') }}
+            {{ Form::label('Alto ') }}
             {{ Form::text('alto', $producto->alto, ['class' => 'form-control' . ($errors->has('alto') ? ' is-invalid' : ''), 'placeholder' => 'Alto']) }}
             {!! $errors->first('alto', '<div class="invalid-feedback">:message</div>') !!}
         </div>
         <div class="form-group">
-            {{ Form::label('Cantidad') }}
+            {{ Form::label('Longitud - Perfileria') }}
             {{ Form::text('cantidad', $producto->cantidad, ['class' => 'form-control' . ($errors->has('cantidad') ? ' is-invalid' : ''), 'placeholder' => 'Cantidad']) }}
             {!! $errors->first('cantidad', '<div class="invalid-feedback">:message</div>') !!}
         </div>
