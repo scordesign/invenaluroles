@@ -3,6 +3,8 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="shortcut icon" href="https://img1.wsimg.com/isteam/ip/7b14240e-5fe2-4cb0-b3b5-062ff5eff41b/LOGO%20%20ALUICA%20CONSTRUCCIONES%20VERTICAL.png.png/:/rs=w:90,h:98,cg:true,m/cr=w:90,h:98/qt=q:95" />
+
 
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
@@ -23,6 +25,8 @@
     <div id="app">
         <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm">
             <div class="container">
+            <img style="width:5%;"src="https://img1.wsimg.com/isteam/ip/7b14240e-5fe2-4cb0-b3b5-062ff5eff41b/LOGO%20%20ALUICA%20CONSTRUCCIONES%20VERTICAL.png.png/:/rs=w:90,h:98,cg:true,m/cr=w:90,h:98/qt=q:95"></img>
+
                 <a class="navbar-brand" href="{{ url('/') }}">
                     {{ config('app.name', 'Laravel') }}
                 </a>
