@@ -89,7 +89,7 @@
 											<td>{{ $producto->ubicacione->name }}</td>
 											<td>{{ $producto->pareja }}</td>
 											<td>{{ $producto->conteo1 }}</td>
-                                            <td>{{ $producto->parejat_id }}</td>
+                                            <td>{{ $producto->parejaone }}</td>
 											<td>{{ $producto->conteo2 }}</td>
 											<td>{{ $producto->deferencia12 }}</td>
 											<td>{{ $producto->conteo3 }}</td>
