@@ -11,20 +11,19 @@ use App\Models\Unidade;
 use App\Models\Pareja;
 use App\Models\Parejaone;
 use Illuminate\Http\Request;
+use App\Http\Controllers;
+use Illuminate\Contracts\View\View;
 
-use Maatwebsite\Excel\Concerns\FromCollection;
-class ProductosExport implements FromCollection
+use Maatwebsite\Excel\Concerns\FromView;
+
+class ProductosExport implements FromView
 {
-    /**
-    * @return \Illuminate\Support\Collection
-    */
-    public function collection()
-    {
-        //
-        Return Producto::all();
-         
+  
+    public function view(): View{
         
-        return view('producto.index', compact('producto', 'bodegas', 'grupos', 'codigos','ubicaciones','unidad','pareja','parejaone'));
+        return view('producto.export',[
+         'producto' =>Producto::all()
+        ]);
 
     }
     
