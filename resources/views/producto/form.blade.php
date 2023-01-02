@@ -40,7 +40,7 @@
         </div>
         <div class="form-group">
             {{ Form::label('Registro Conteo 1') }}
-            {{ Form::text('conteo1', $producto->conteo1, ['class' => 'form-control' . ($errors->has('conteo1') ? ' is-invalid' : ''), 'placeholder' => 'Conteo 1' , 'id' => 'co1']) }}
+            {{ Form::text('conteo1', $producto->conteo1, ['class' => 'form-control' . ($errors->has('conteo1') ? ' is-invalid' : ''), 'placeholder' => 'Conteo 1' , 'id' => 'co1' , 'onkeyup' => 'calculate()']) }}
             {!! $errors->first('conteo1', '<div class="invalid-feedback">:message</div>') !!}
         </div>
         <div class="form-group">
