@@ -14,7 +14,7 @@ class ProductosExport implements FromCollection
         //
         Return Producto::all();
 
-        return view('producto.show', compact('producto'));
+        return view('producto.index', compact('producto'));
 
     }
     
