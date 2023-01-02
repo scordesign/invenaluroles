@@ -87,9 +87,17 @@
 											<td>{{ $producto->bodega->name }}</td>
 											<td>{{ $producto->unidad->name }}</td>
 											<td>{{ $producto->ubicacione->name }}</td>
-											<td>{{ $producto->pareja }}</td>
+                                            @if ($producto->pareja_id == 0 || $producto->pareja_id == null)
+                                            <td>{{ "NA" }}</td>
+                                            @else
+                                            <td>{{ $producto->pareja->name }}</td>
+                                            @endif
 											<td>{{ $producto->conteo1 }}</td>
-                                            <td>{{ $producto->parejaone }}</td>
+                                            @if ($producto->parejat_id == 0 || $producto->parejat_id == null)
+                                            <td>{{ "NA" }}</td>
+                                            @else
+                                            <td>{{ $producto->parejaone->name }}</td>
+                                            @endif
 											<td>{{ $producto->conteo2 }}</td>
 											<td>{{ $producto->deferencia12 }}</td>
 											<td>{{ $producto->conteo3 }}</td>
