@@ -1,7 +1,7 @@
 <div class="box box-info padding-1">
     <div class="box-body">
         
-        <div class="form-group">
+    <div class="form-group">
             {{ Form::label('Nombre o Codigo Producto') }}
             {{ Form::select('name_id', $codigos , $producto->name_id, ['class' => 'form-control' . ($errors->has('name_id') ? ' is-invalid' : ''), 'placeholder' => 'Nombre o Codigo']) }}
             {!! $errors->first('name_id', '<div class="invalid-feedback">:message</div>') !!}
@@ -27,9 +27,19 @@
             {!! $errors->first('ubicacion_id', '<div class="invalid-feedback">:message</div>') !!}
         </div>
         <div class="form-group">
+            {{ Form::label('Pareja Conteo 1') }}
+            {{ Form::select('pareja_id', $pareja, $producto->pareja_id, ['class' => 'form-control' . ($errors->has('pareja_id') ? ' is-invalid' : ''), 'placeholder' => 'Parejas 1']) }}
+            {!! $errors->first('pareja_id', '<div class="invalid-feedback">:message</div>') !!}
+        </div>
+        <div class="form-group">
             {{ Form::label('Registro Conteo 1') }}
             {{ Form::text('conteo1', $producto->conteo1, ['class' => 'form-control' . ($errors->has('conteo1') ? ' is-invalid' : ''), 'placeholder' => 'Conteo 1' , 'id' => 'co1']) }}
             {!! $errors->first('conteo1', '<div class="invalid-feedback">:message</div>') !!}
+        </div>
+        <div class="form-group">
+            {{ Form::label('Pareja Conteo 2') }}
+            {{ Form::select('parejat_id', $parejaone, $producto->parejat_id, ['class' => 'form-control' . ($errors->has('parejat_id') ? ' is-invalid' : ''), 'placeholder' => 'Parejas 2']) }}
+            {!! $errors->first('parejat_id', '<div class="invalid-feedback">:message</div>') !!}
         </div>
         <div class="form-group">
             {{ Form::label('Registro Conteo 2') }}
@@ -46,22 +56,37 @@
             {{ Form::text('conteo3', $producto->conteo3, ['class' => 'form-control' . ($errors->has('conteo3') ? ' is-invalid' : ''), 'placeholder' => 'Conteo 3' , 'id' => 'co3']) }}
             {!! $errors->first('conteo3', '<div class="invalid-feedback">:message</div>') !!}
         </div>
-    <script>
+        <div class="form-group">
+            {{ Form::label('Ancho') }}
+            {{ Form::text('ancho', $producto->ancho, ['class' => 'form-control' . ($errors->has('ancho') ? ' is-invalid' : ''), 'placeholder' => 'Ancho']) }}
+            {!! $errors->first('ancho', '<div class="invalid-feedback">:message</div>') !!}
+        </div>
+        <div class="form-group">
+            {{ Form::label('Alto') }}
+            {{ Form::text('alto', $producto->alto, ['class' => 'form-control' . ($errors->has('alto') ? ' is-invalid' : ''), 'placeholder' => 'Alto']) }}
+            {!! $errors->first('alto', '<div class="invalid-feedback">:message</div>') !!}
+        </div>
+        <div class="form-group">
+            {{ Form::label('Cantidad') }}
+            {{ Form::text('cantidad', $producto->cantidad, ['class' => 'form-control' . ($errors->has('cantidad') ? ' is-invalid' : ''), 'placeholder' => 'Cantidad']) }}
+            {!! $errors->first('cantidad', '<div class="invalid-feedback">:message</div>') !!}
+        </div>
+        <script>
 
-        function calculate() {
-            var con1 = document.getElementById("co1").value;
-            var con2 = document.getElementById("co2").value;
-            var con3 = document.getElementById("co3");
-            var calculo = con2 - con1;
-            var con1y2 = document.getElementById("co1y2").setAttribute("value", calculo);
-            if (calculo == 0) {
-                con3.setAttribute("Disabled", "Disabled");
-            } else {
-                con3.removeAttribute('disabled');
-            }
-        }
+function calculate() {
+    var con1 = document.getElementById("co1").value;
+    var con2 = document.getElementById("co2").value;
+    var con3 = document.getElementById("co3");
+    var calculo = con2 - con1;
+    var con1y2 = document.getElementById("co1y2").setAttribute("value", calculo);
+    if (calculo == 0) {
+        con3.setAttribute("Disabled", "Disabled");
+    } else {
+        con3.removeAttribute('disabled');
+    }
+}
 
-    </script>
+</script>
     </div>
     <div class="box-footer mt20">
         <button type="submit" class="btn btn-primary">Guardar</button>

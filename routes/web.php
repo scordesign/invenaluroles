@@ -28,6 +28,10 @@ Route::resource('codigos', App\Http\Controllers\CodigoController::class)->middle
 Route::resource('unidades', App\Http\Controllers\UnidadeController::class)->middleware('auth');
 Route::resource('ubicaciones', App\Http\Controllers\UbicacioneController::class)->middleware('auth');
 Route::resource('productos', App\Http\Controllers\ProductoController::class)->middleware('auth');
+Route::resource('parejas', App\Http\Controllers\ParejaController::class)->middleware('auth');
+Route::resource('parejaones', App\Http\Controllers\ParejaoneController::class)->middleware('auth');
+
+
 Route::get('excel', [App\Http\Controllers\ExcelController::class, 'ProductosExport']);
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');

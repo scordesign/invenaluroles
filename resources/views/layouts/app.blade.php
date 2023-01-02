@@ -58,6 +58,14 @@
                                 {{ __('Productos') }}
                             </a></li>
                             <li class="nav-item">
+                            <a class="nav-link" href="{{ route('parejas.index') }}">
+                                {{ __('Pareja Conteo 1') }}
+                            </a></li>
+                            <li class="nav-item">
+                            <a class="nav-link" href="{{ route('parejaones.index') }}">
+                                {{ __('Pareja Conteo 2') }}
+                            </a></li>
+                            <li class="nav-item">
                             <a class="nav-link" href="{{ route('unidades.index') }}">
                                 {{ __('Unidades') }}
                             </a></li>

@@ -15,23 +15,16 @@ use Illuminate\Database\Eloquent\Model;
  * @property $ubicacion_id
  * @property $created_at
  * @property $updated_at
- * @property $pareja_id
  * @property $conteo1
- * @property $parejat_id
  * @property $conteo2
  * @property $deferencia12
  * @property $conteo3
- * @property $ancho
- * @property $alto
- * @property $cantidad
  *
  * @property Bodega $bodega
  * @property Codigo $codigo
  * @property Grupo $grupo
- * @property Parejaone $parejaone
- * @property Pareja $pareja
  * @property Ubicacione $ubicacione
- * @property Unidade $unidade
+ * @property Unidade $unidad
  * @package App
  * @mixin \Illuminate\Database\Eloquent\Builder
  */
@@ -41,11 +34,9 @@ class Producto extends Model
     static $rules = [
 		'name_id' => 'required',
 		'bodega_id' => 'required',
-		//'grupo_id' => 'required',
+		'grupo_id' => 'required',
 		'unidad_id' => 'required',
-		'ubicacion_id' => 'required',
-		//'pareja_id' => 'required',
-		//'parejat_id' => 'required',
+		//'ubicacion_id' => 'required',
 		'conteo1' => 'required',
 	//	'conteo2' => 'required',
 	//	'deferencia12' => 'required',
@@ -59,7 +50,7 @@ class Producto extends Model
      *
      * @var array
      */
-    protected $fillable = ['name_id','bodega_id','grupo_id','unidad_id','ubicacion_id','pareja_id','conteo1','parejat_id','conteo2','deferencia12','conteo3','ancho','alto','cantidad'];
+    protected $fillable = ['name_id','bodega_id','grupo_id','unidad_id','ubicacion_id','conteo1','conteo2','deferencia12','conteo3'];
 
 
     /**
@@ -84,22 +75,6 @@ class Producto extends Model
     public function grupo()
     {
         return $this->hasOne('App\Models\Grupo', 'id', 'grupo_id');
-    }
-    
-    /**
-     * @return \Illuminate\Database\Eloquent\Relations\HasOne
-     */
-    public function parejaone()
-    {
-        return $this->hasOne('App\Models\Parejaone', 'id', 'parejat_id');
-    }
-    
-    /**
-     * @return \Illuminate\Database\Eloquent\Relations\HasOne
-     */
-    public function pareja()
-    {
-        return $this->hasOne('App\Models\Pareja', 'id', 'pareja_id');
     }
     
     /**

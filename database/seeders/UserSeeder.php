@@ -32,7 +32,19 @@ class UserSeeder extends Seeder
             'name' => 'Angelica Palacios',
             'email' => 'angelica.palacios@aluicaconstrucciones.com',
             'password' => bcrypt('Angelica2023.')
-        ])->assignRole('admin');
+        ])->assignRole('digitador');
+
+        User::create([
+            'name' => 'Mauricio Veloza',
+            'email' => 'operaciones.ventanas@aluicaconstrucciones.com',
+            'password' => bcrypt('Mauricio2023.')
+        ])->assignRole('digitador');
+
+        User::create([
+            'name' => 'Juliana Gahyda',
+            'email' => 'comercial1@aluicaconstrucciones.com',
+            'password' => bcrypt('Juliana2023.')
+        ])->assignRole('digitador');
 
         User::create([
             'name' => 'Lisbeth',

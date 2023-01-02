@@ -34,7 +34,7 @@
                     <div class="card-header">
                         <div style="display: flex; justify-content: space-between; align-items: center;">
 
-                            <span id="card_title">
+                        <span id="card_title">
                                 {{ __('Conteo Inventario') }}
                                 <input id="buscar" onkeyup="buscar()" type="search" class="form-control float-right" placeholder="buscar" >
                             </span>
@@ -64,17 +64,22 @@
 										<th>Grupo</th>
 										<th>Unidad</th>
 										<th>Ubicación</th>
-										<th>Conteo 1</th>
-										<th>Conteo 2</th>
+										<th>Pareja Id</th>
+										<th>Conteo1</th>
+										<th>Parejat Id</th>
+										<th>Conteo2</th>
 										<th>Diferencia Conteo 1 & 2</th>
 										<th>Conteo3</th>
+										<th>Ancho</th>
+										<th>Alto</th>
+										<th>Cantidad</th>
 
                                         <th></th>
                                     </tr>
                                 </thead>
                                 <tbody>
                                     @foreach ($productos as $producto)
-                                        <tr id="{{ ++$i }}">
+                                    <tr id="{{ ++$i }}">
                                             <td>{{ $i }}</td>
                                             
 											<td>{{ $producto->codigo->codigo }}</td>
@@ -82,10 +87,15 @@
 											<td>{{ $producto->grupo->name }}</td>
 											<td>{{ $producto->unidad->name }}</td>
 											<td>{{ $producto->ubicacione->name }}</td>
+											<td>{{ $producto->pareja->name }}</td>
 											<td>{{ $producto->conteo1 }}</td>
+											<td>{{ $producto->parejaone->name }}</td>
 											<td>{{ $producto->conteo2 }}</td>
 											<td>{{ $producto->deferencia12 }}</td>
 											<td>{{ $producto->conteo3 }}</td>
+											<td>{{ $producto->ancho }}</td>
+											<td>{{ $producto->alto }}</td>
+											<td>{{ $producto->cantidad }}</td>
 
                                             <td>
                                                 <form action="{{ route('productos.destroy',$producto->id) }}" method="POST">
@@ -93,10 +103,7 @@
                                                     <a class="btn btn-sm btn-success" href="{{ route('productos.edit',$producto->id) }}"><i class="fa fa-fw fa-edit"></i> Edit</a>
                                                     @csrf
                                                     @method('DELETE')
-                                                    @role('admin')
-                                                    
-                                                <button type="submit" class="btn btn-danger btn-sm"><i class="fa fa-fw fa-trash"></i> Delete</button>
-                                                @endrole
+                                                    <button type="submit" class="btn btn-danger btn-sm"><i class="fa fa-fw fa-trash"></i> Delete</button>
                                                 </form>
                                             </td>
                                         </tr>

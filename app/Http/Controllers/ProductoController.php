@@ -8,6 +8,8 @@ use App\Models\Codigo;
 use App\Models\Grupo;
 use App\Models\Ubicacione;
 use App\Models\Unidade;
+use App\Models\Pareja;
+use App\Models\Parejaone;
 use Illuminate\Http\Request;
 
 /**
@@ -44,8 +46,10 @@ class ProductoController extends Controller
         $codigos = Codigo::pluck('codigo', 'id');
         $ubicaciones = Ubicacione::pluck('name', 'id');
         $unidad = Unidade::pluck('name', 'id');
+        $pareja = Pareja::pluck('name', 'id');
+        $parejaone = Parejaone::pluck('name', 'id');
 
-        return view('producto.create', compact('producto', 'bodegas', 'grupos', 'codigos','ubicaciones','unidad'));    
+        return view('producto.create', compact('producto', 'bodegas', 'grupos', 'codigos','ubicaciones','unidad','pareja','parejaone'));    
         
     }
 
@@ -94,8 +98,10 @@ class ProductoController extends Controller
         $codigos = Codigo::pluck('codigo', 'id');
         $ubicaciones = Ubicacione::pluck('name', 'id');
         $unidad = Unidade::pluck('name', 'id');
+        $pareja = Pareja::pluck('name', 'id');
+        $parejaone = Parejaone::pluck('name', 'id');
 
-        return view('producto.edit', compact('producto', 'bodegas', 'grupos', 'codigos','ubicaciones','unidad'));    
+        return view('producto.edit', compact('producto', 'bodegas', 'grupos', 'codigos','ubicaciones','unidad','pareja','parejaone'));    
         
      
     }
