@@ -66,7 +66,7 @@
 										<th>Ubicación</th>
 										<th>Conteo 1</th>
 										<th>Conteo 2</th>
-										<th>Deferencia Conteo 1 & 2</th>
+										<th>Diferencia Conteo 1 & 2</th>
 										<th>Conteo3</th>
 
                                         <th></th>
