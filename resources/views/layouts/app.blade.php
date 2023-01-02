@@ -44,7 +44,10 @@
                                 {{ __('Usuarios') }}
                             </a></li>@endrole
                             @role('admin')
-                          
+                            <li class="nav-item">
+                            <a class="nav-link" href="https://aluinvent.scordesign.com/public/excel">
+                                {{ __('Excel') }}
+                            </a></li>
                         <li class="nav-item">
                             <a class="nav-link" href="{{ route('bodegas.index') }}">
                                 {{ __('Bodegas') }}
