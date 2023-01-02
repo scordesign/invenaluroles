@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 @section('template_title')
-    {{ $producto->name ?? 'Show Producto' }}
+    {{ $producto->name ?? 'Mostrar conteo X Producto' }}
 @endsection
 
 @section('content')
@@ -11,57 +11,54 @@
                 <div class="card">
                     <div class="card-header">
                         <div class="float-left">
-                            <span class="card-title">Show Producto</span>
+                            <span class="card-title">Mostrar conteo X Producto</span>
                         </div>
                         <div class="float-right">
-                            <a class="btn btn-primary" href="{{ route('productos.index') }}"> Back</a>
+                            <a class="btn btn-primary" href="{{ route('productos.index') }}"> Volver</a>
                         </div>
                     </div>
 
                     <div class="card-body">
                         
-                        <div class="form-group">
-                            <strong>Name Id:</strong>
-                            {{ $producto->name_id }}
+                    <div class="form-group" name="{{ $producto->name_id }}">
+                            <strong>Nombre o Codigo:</strong>
+                            {{ $producto->codigo->codigo }}
+                        </div>
+                        <div class="form-group" name="{{ $producto->name_id }}">
+                            <strong>Bodega:</strong>
+                            {{ $producto->bodega->name }}
+                        </div>
+                       
+                        <div class="form-group" name="{{ $producto->name_id }}">
+                            <strong>Unidad:</strong>
+                            {{ $producto->unidad->name }}
+                        </div>
+                        <div class="form-group" name="{{ $producto->name_id }}">
+                            <strong>Ubicacion:</strong>
+                            {{ $producto->ubicacione->name }}
                         </div>
                         <div class="form-group">
-                            <strong>Bodega Id:</strong>
-                            {{ $producto->bodega_id }}
+                            <strong>Pareja  Conteo 1:</strong>
+                            {{ $producto->pareja->name }}
                         </div>
                         <div class="form-group">
-                            <strong>Grupo Id:</strong>
-                            {{ $producto->grupo_id }}
-                        </div>
-                        <div class="form-group">
-                            <strong>Unidad Id:</strong>
-                            {{ $producto->unidad_id }}
-                        </div>
-                        <div class="form-group">
-                            <strong>Ubicacion Id:</strong>
-                            {{ $producto->ubicacion_id }}
-                        </div>
-                        <div class="form-group">
-                            <strong>Pareja Id:</strong>
-                            {{ $producto->pareja_id }}
-                        </div>
-                        <div class="form-group">
-                            <strong>Conteo1:</strong>
+                            <strong>Conteo 1:</strong>
                             {{ $producto->conteo1 }}
                         </div>
                         <div class="form-group">
-                            <strong>Parejat Id:</strong>
-                            {{ $producto->parejat_id }}
+                            <strong>Pareja Conteo 2:</strong>
+                            {{ $producto->parejaone->name }}
                         </div>
                         <div class="form-group">
-                            <strong>Conteo2:</strong>
+                            <strong>Conteo 2:</strong>
                             {{ $producto->conteo2 }}
                         </div>
                         <div class="form-group">
-                            <strong>Deferencia12:</strong>
+                            <strong>Diferencia Conteo 1  y 2:</strong>
                             {{ $producto->deferencia12 }}
                         </div>
                         <div class="form-group">
-                            <strong>Conteo3:</strong>
+                            <strong>Conteo 3:</strong>
                             {{ $producto->conteo3 }}
                         </div>
                         <div class="form-group">
@@ -73,7 +70,7 @@
                             {{ $producto->alto }}
                         </div>
                         <div class="form-group">
-                            <strong>Cantidad:</strong>
+                            <strong>Longitud:</strong>
                             {{ $producto->cantidad }}
                         </div>
 

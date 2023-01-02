@@ -65,9 +65,7 @@
 										<th>Ubicación</th>
 										<th>Pareja Conteo 1</th>
 										<th>Conteo 1</th>
-                                        @isset($parejaone)
 										<th>Pareja Conteo 2</th>
-                                        @endisset
 										<th>Conteo 2</th>
 										<th>Diferencia Conteo 1 & 2</th>
 										<th>Conteo 3</th>
@@ -91,9 +89,7 @@
 											<td>{{ $producto->ubicacione->name }}</td>
 											<td>{{ $producto->pareja->name }}</td>
 											<td>{{ $producto->conteo1 }}</td>
-                                            @isset($parejaone)
-                                            <td>{{ $producto->parejaone->name }}</td>
-                                            @endisset
+                                            <td>{{ $producto->parejat_id }}</td>
 											<td>{{ $producto->conteo2 }}</td>
 											<td>{{ $producto->deferencia12 }}</td>
 											<td>{{ $producto->conteo3 }}</td>
